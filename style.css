@@ -1,0 +1,149 @@
+@keyframes slide-fade-in {
+    from {
+        opacity: 0.2;
+        transform: translateY(10vh);
+    }
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .card {
+        view-timeline-name: --item-timeline;
+        animation: slide-fade-in both;
+        animation-timeline: --item-timeline;
+        animation-range: contain 0% contain 60%;
+    }
+
+}
+/*FONT STYLES*/
+@font-face {
+  font-family: 'gg sans Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local('gg sans Bold'), url('gg sans Bold.woff') format('woff');
+}
+*{
+  font-family:'gg sans Bold';
+  font-weight:bolder;
+  font-size:16px;
+}
+#preloaded-intro{
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100vh;
+  background: #212529 url(/assets/discord-loading.gif) no-repeat center;
+}
+/*FONT STYLES*/
+.customcard {
+
+    /* background-color: rgba(0, 0, 0, 0.142); */
+    border-radius: 8px;
+    backdrop-filter: blur(100px);
+
+
+}
+
+.floating-button{
+width: 60px;
+height: 60px;
+}
+.floating-button {
+    background-image: url(/assets/discordicon.png);
+    background-size: cover;
+    /* border: solid 2px rgb(107, 102, 102); */
+    border-radius: 10%;
+    display: block; 
+    position: fixed; 
+    bottom: 1%; 
+    right: 1%; 
+    /* margin: -60px 0 0 -280px; */
+     /* transform: rotate(360deg);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0px;
+    right: 10px; */
+    opacity: 0.5;
+    transition-property: all;
+    transition-duration: 1s;
+    z-index: 999;
+    border: none;
+    background-color: transparent;
+    /* transform: 1s; */
+
+    animation-name: float-rotate;
+    animation-play-state: running;
+    animation-duration: 5s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite; 
+}
+@keyframes float-rotate 
+{
+     from{
+        transform: rotate(0deg);
+     }
+     to{
+        transform: rotate(360deg);
+     }
+    
+}
+
+.floating-button:hover {
+    transform: rotate(360deg) translate(0);
+    opacity: 1;
+}
+/* @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.customcard::after, .customcard::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), red, green, yellow, blue, red);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+  .customcard::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  } */
+
+.row {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.card {
+    transition: all;
+    transition-duration: 0.7s;
+    scale: 1;
+    padding: 3%;
+    
+}
+
+.card:hover {
+    transition: all;
+    transition-duration: 0.6s;
+    scale: 1.04;
+    box-shadow: 5px 6px 15px 0px rgb(212, 20, 20);
+}
+.card-htext{
+
+
+}
